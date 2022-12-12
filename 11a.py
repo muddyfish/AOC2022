@@ -3,7 +3,7 @@ from typing import List, Callable
 import re
 
 number_regex = re.compile(r"(\d+)")
-op_regex = re.compile(r"Operation: new = (old . (?:\d+|old|new))")
+op_regex = re.compile(r"Operation: new = (old . (?:\d+|old))")
 
 
 @dataclass
