@@ -18,12 +18,7 @@ bound = 4000000
 
 def correct_check(x, y):
     if 0 <= x <= bound and 0 <= y <= bound:
-        for sensor in sensors:
-            current_dist = abs(x - sensor[0]) + abs(y - sensor[1])
-            max_dist = sensor_dists[sensor]
-            if current_dist <= max_dist:
-                break
-        else:
+        if all(abs(x - sensor[0]) + abs(y - sensor[1]) > sensor_dists[sensor] for sensor in sensors):
             print(x * 4000000 + y)
             exit()
 
