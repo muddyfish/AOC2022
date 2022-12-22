@@ -158,7 +158,6 @@ for match in dirs_re.finditer(directions):
     position = move(position, amount)
     if direction is None:
         new_direction = position[2]
-        break
     else:
         new_direction = (position[2] + MAPPING[direction]) % 4
     position = (position[0], position[1], new_direction)

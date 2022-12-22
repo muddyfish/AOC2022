@@ -84,7 +84,6 @@ for match in dirs_re.finditer(directions):
     print(amount, direction)
     if direction is None:
         new_direction = position[2]
-        break
     else:
         new_direction = (position[2] + MAPPING[direction]) % 4
     amount = int(amount)
